@@ -1,0 +1,281 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Raleway:wght@400;900&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+/* General Styles */
+*{
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: #f5f5f5; */
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    position: absolute;
+    height: 30vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     padding-left: 20px;
+    background: #000000e3;
+    /* position: fixed; */
+    
+}
+.logo{
+    height: 80%;
+    width: 20%;
+
+}
+.logo img{
+    height: 80%;
+    width: 80%;
+
+}
+nav{
+ 
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav li{
+list-style-type: none; 
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+   width: 100%;
+}
+nav a {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    position: relative;
+}
+ li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #e5dede;
+    bottom: -5px;
+    left: 50%;
+    transition: 0.3s;
+    transform: translateX(-50%);
+}
+
+li  a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  height: 10vh;
+  
+  text-align: center;
+    padding: 200px 20px;
+    
+    color: rgb(12, 12, 12);
+    font-family: 'Raleway', sans-serif;
+}
+.hero h1 {
+    font-size: 50px;
+    font-family: 'Raleway', sans-serif;
+}
+.font2{
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url('https://th.bing.com/th/id/R.ac7ef11a5e405a60b576e6a15f10fa10?rik=mc50EvQXWlSXNA&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f03%2fDark-Forest-Wallpaper-Free.jpg&ehk=lpdgVtFt3BqkrxmfbRJq78arO9ThpqsiDQx0BPH1t%2bM%3d&risl=&pid=ImgRaw&r=0');
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.hero button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #ee0808;
+    font-family: "Grechen Fuemen", serif;
+    font-weight: 800;
+    font-style: normal;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.hero button:focus::after {
+    content: '';
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: rgba(121, 27, 27, 0.789);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: ripple 0.6s linear;
+}
+@keyframes ripple {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Blog Section */
+.blog {
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding:20px;
+    gap:1em;
+   
+}
+.post{
+    border-radius: 10px;
+    background-color: #000000;
+    background-image: linear-gradient(0deg, #000000 0%, #2f4040 100%);
+    
+   
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.852);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+padding: 5px 5px 0 5px;
+   /* padding: top right bottom left; */
+  
+}
+.post img{
+    height: 43%;
+    width: 100%;
+    object-fit:fill;   
+    position: relative;
+}
+h3{
+    color: #e5dede;
+    font-weight: 900;
+    text-align: center;
+    font-family: "Lobster", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+}
+
+.post:hover {
+    transform: translatey(-10px);
+    opacity: 2;
+}
+.post img {
+transition: 0.3s;
+}
+.post {
+    overflow: hidden; /* Ensures the image doesn't shrink inside */
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.post:hover img {
+    transform: scale(0.9); /* Zoom out effect */
+}
+/* Categories */
+.categories {
+    margin-left: 20vw;
+    margin-right: 20vw;
+    padding: 50px;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+button{
+    font-family: "Lexend", serif;
+    font-weight: 900;
+    color: #ffffff;
+ 
+}
+.category {
+    padding: 20px 15px;
+    border-radius: 50%;
+    background: #0c0b0b;
+    color: rgb(225, 210, 210);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.category-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Subscribe */
+.subscribe {
+    text-align: center;
+    padding: 50px;
+    background: #333;
+    color: white;
+}
+.subscribe input {
+    padding: 10px;
+    margin: 5px;
+    width: 250px;
+}
+.subscribe button {
+    padding: 10px 20px;
+    background: #ff6f61;
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+.subscribe button:hover {
+    box-shadow: 0 0 10px #ff6f61;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    
+
+
+}
+.social-icons a {
+    font-size: 24px;
+    margin: 0 10px;
+    transition: 0.3s;
+    text-decoration: none;
+    color: aliceblue;
+}
+.social-icons {
+    width: 100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a:hover {
+    transform: rotate(360deg);
+}

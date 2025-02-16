@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reciepe Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="myblog.webp" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1><span class="font1">Welcome to</span>
+             <span class="font2">My Recipe Blog</span></h1>
+        <button class="cta-button">Read More</button>
+    </section>
+    
+    <section class="blog">
+        <div class="post">
+            <img src="https://th.bing.com/th/id/OIP.0GdTSfr1tFAY1xVoraAX6wHaF6?rs=1&pid=ImgDetMain" alt="Blog Post 1">
+            <h3>Tandori Chicken </h3>
+            <p></p>
+        </div>
+        <div class="post">
+            <img src="https://th.bing.com/th/id/OIP.J8Elgj-nv2FFWJVhr7ELcgHaE8?rs=1&pid=ImgDetMain" alt="Blog Post 2">
+            <h3>Chole Bhature</h3>
+            <p></p>
+        </div>
+        <div class="post">
+            <img src="https://www.secondrecipe.com/wp-content/uploads/2020/11/dal-bati-churma.jpg" alt="Blog Post 3">
+            <h3>Dal Bati</h3>
+            <p></p>
+        </div>
+    </section>
+    
+    <section class="categories">
+        <button class="category"><p>Tech</p></button>
+        <button class="category"><p>Lifestyle</p></button>
+        <button class="category"><p>Travel</p></button>
+    </section>
+    
+    <section class="subscribe">
+        <h2>Subscribe to Our Newsletter</h2>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+    
+    <footer>
+        <div class="social-icons">
+            <a href="#">H</a>
+            <a href="#">B</a>
+            <a href="#">O</a>
+        </div>
+    </footer>
+    
+    <script>
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            let ripple = document.createElement('span');
+            ripple.classList.add('ripple');
+            this.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 600);
+        });
+    </script>
+</body>
+</html>
